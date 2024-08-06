@@ -1,3 +1,6 @@
-n = int(input('Digite um número: '))
+n = int(input('Digite um número para ver sua tabuada: '))
+linha = 12*'='
+print(linha)
 for x in range(1,11):
-    print('{:2} x {} = {:2}'.format(x, n, x*n))
+    print('{} x {:2} = {}'.format(n, x, x*n))
+print(linha)
