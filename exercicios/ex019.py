@@ -1,4 +1,5 @@
 from random import choice
+
 lista = list()
 for x in range(4):
     lista.append(input('{}º aluno: '.format(x+1)))
