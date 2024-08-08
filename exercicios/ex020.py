@@ -1,9 +1,6 @@
-from random import choice
+from random import shuffle
 lista = []
 for x in range(4):
     lista.append(input('{}° aluno: '.format(x+1)))
-
-for x in range(4):
-    sorteado = choice(lista)
-    print('{}° sorteado: {}'.format(x+1, sorteado))
-    lista.remove(sorteado)
+shuffle(lista)
+print('A ordem de apresentação será:\n{}'.format(lista))
