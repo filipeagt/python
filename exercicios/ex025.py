@@ -1,5 +1,2 @@
-nome =  input('Digite um nome: ').upper().split()
-if 'SILVA' in nome:
-    print('Tem Silva no nome')
-else:
-    print('Não tem Silva no nome')
+nome =  input('Digite um nome: ').upper().strip()#.split()
+print('Tem SILVA no nome.' if 'SILVA' in nome else 'Não tem SILVA no nome.')
