@@ -3,4 +3,4 @@ if salario > 1250:
     aumento = salario*.10
 else:
     aumento = salario*.15
-print('O novo salário será R${:.2f}.'.format(salario+aumento))
+print('Quem ganhava R${:.2f}, passa a ganhar R${:.2f}.'.format(salario, salario+aumento))
