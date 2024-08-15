@@ -3,12 +3,12 @@ linha = '-=-'*10
 
 print('{}{}\n    Minha Casa Minha Vida\n{}{}'.format(cores['azul'], linha, linha, cores['limpa']))
 
-casa = float(input('Qual o valor da casa? '))
-salario = float(input('Qual o salário? '))
+casa = float(input('Qual o valor da casa? R$'))
+salario = float(input('Qual o salário? R$'))
 anos = int(input('Quantos anos para pagar? '))
 meses = anos * 12
 prestacao = casa / meses
 if prestacao <= salario*.30:
-    print('Finaciamento {}APROVADO{} em {} meses com prestações de R${:.2f}'.format(cores['verde'], cores['limpa'], meses, prestacao))
+    print('Finaciamento de R${:.2f} {}APROVADO{} em {} meses com prestações de R${:.2f}'.format(casa, cores['verde'], cores['limpa'], meses, prestacao))
 else:
-    print('Finaciamento {}REPROVADO{}, a prestação de R${:.2f} ultrapassa 30% do salário.'.format(cores['vermelho'], cores['limpa'], prestacao))
+    print('Finaciamento de R${:.2f} {}REPROVADO{}, a prestação de R${:.2f} ultrapassa 30% do salário.'.format(casa, cores['vermelho'], cores['limpa'], prestacao))
