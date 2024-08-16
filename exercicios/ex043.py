@@ -1,6 +1,6 @@
 print('Calculadora de IMC')
-peso = float(input('Digite o peso: '))
-altura = float(input('Digite a altura: '))
+peso = float(input('Digite o peso (kg): '))
+altura = float(input('Digite a altura (m): '))
 imc = peso / altura**2
 
 if imc < 18.5:
@@ -14,4 +14,4 @@ elif imc < 40:
 else:
     status = 'Obesidade Mórbida'
 
-print('IMC = {}, status: {}'.format(imc, status))
+print('IMC = {:.1f}, status: {}.'.format(imc, status))
