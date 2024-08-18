@@ -1,2 +1,3 @@
-for x in range(2,50,2):
-    print(x)
+for x in range(2,51,2):
+    print(x, end=' ')
+print('Acabou!')
