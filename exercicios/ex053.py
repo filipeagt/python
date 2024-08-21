@@ -1,10 +1,10 @@
 frase = input('Digite uma frase: ').strip().upper().split()
 frase = ''.join(frase)
+'''inverso = ''
 i = -1
-palindromo = True
 for letra in frase:
-    if letra != frase[i]:
-        palindromo = False
-        break
-    i-=1
-print('É UM PALÍNDROMO!' if palindromo else 'NÃO É UM PALÍNDROMO!')
+    inverso += frase[i]
+    i-=1'''
+inverso = frase[::-1]
+print('O inverso de {} é {}.'.format(frase, inverso))
+print('TEMOS UM PALÍNDROMO!' if frase==inverso else 'A frase digitada NÃO é um palíndromo!')
