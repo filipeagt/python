@@ -10,4 +10,4 @@ for pessoa in range(1, 8):
         maiores += 1
     else:
         menores += 1
-print('{} pessoas são maiores de idade e {} são menores de idade.'.format(maiores, menores))
+print('Ao todo {} pessoas são maiores de idade e {} pessoas são menores de idade.'.format(maiores, menores))
