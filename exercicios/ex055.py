@@ -1,6 +1,6 @@
-for pessoa in range(5):
-    peso = float(input('Digite o peso da {}ª pessoa (kg): '.format(pessoa+1)))
-    if pessoa == 0: #se estiver na primeira iteração
+for pessoa in range(1, 6):
+    peso = float(input('Digite o peso da {}ª pessoa (kg): '.format(pessoa)))
+    if pessoa == 1: #se estiver na primeira iteração
         maior = peso
         menor = peso
     else:
