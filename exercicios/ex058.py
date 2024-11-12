@@ -6,7 +6,7 @@ num = int(input("Em qual número entre 0 e 10 eu pensei? "))
 while (ale != num):
     print("Processando...")
     sleep(1)
-    num = int(input("ERROU! Escolha outro número: "))
+    num = int(input("{}... Tente mais uma vez: ".format('Mais' if ale > num else 'Menos')))
     palpites += 1
 sleep(1)
 print("Processando...")
