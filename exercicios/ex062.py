@@ -4,8 +4,11 @@ print('='*25)
 num = int(input('Primeiro termo: '))
 razao = int(input('Razão: '))
 qtd = 10
+somatorio = 0
 while qtd != 0:
     for x in range(qtd):
         print('{} =>'.format(num), end=' ')
         num += razao
-    qtd = int(input('Você quer mostrar mais quantos números? '))
+        somatorio += 1
+    qtd = int(input('PAUSA\nVocê quer mostrar mais quantos termos? '))
+print('A progressão foi finalizada com {} termos mostrados.'.format(somatorio))

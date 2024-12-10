@@ -8,4 +8,4 @@ while i < 10:
     print('{} =>'.format(num), end=' ')
     num += razao
     i += 1
-print('Acabou')
+print('FIM!')
