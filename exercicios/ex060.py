@@ -1,7 +1,8 @@
-num = int(input('Digite um número: '))
+num = int(input('Digite um número para calcular seu fatorial: '))
 fat = 1
-cont = 1
-while num >= cont:
-    fat *= cont
-    cont += 1
-print('O fatorial de {} é {}'.format(num, fat))
+print('Calculando {}! = {} '.format(num, num), end='')
+while num > 1:
+    fat *= num
+    num -= 1
+    print('x {} '.format(num), end='')
+print('= {}'.format(fat))
