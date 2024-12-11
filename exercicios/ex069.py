@@ -6,16 +6,12 @@ maiorIdade = homens = mulheresMenos20 = 0
 while True:
     nome = input('Nome: ').strip()
     idade = int(input('Idade: '))
-    while True:
+    continuar = sexo = ' '
+    while sexo not in 'MF':
         sexo = input('Sexo [M/F]: ').upper().strip()[0]
-        if sexo in 'MF':
-            break
-    pessoas.append({'nome': nome, 'idade': idade, 'sexo': sexo})
-    while True:
+    pessoas.append({'nome': nome, 'idade': idade, 'sexo': sexo})    
+    while continuar not in 'SN':
         continuar = input('Deseja cadastar mais pessoas [S/N]: ').upper().strip()[0]
-        if continuar not in 'SN':
-            continue
-        break
     if continuar == 'N':
         break
 for pessoa in pessoas:
@@ -27,5 +23,5 @@ for pessoa in pessoas:
         mulheresMenos20 += 1
 print(f'Cadastro de {len(pessoas)} pessoa(s) realizado com sucesso!')
 print(f'{maiorIdade} maior(es) de 18 anos.') 
-print(f'{homens} ', 'homem' if homens == 1 else 'homens')
+print(f'{homens} ', 'homem.' if homens == 1 else 'homens.')
 print(f'{mulheresMenos20} mulher(es) com menos de 20 anos.')
