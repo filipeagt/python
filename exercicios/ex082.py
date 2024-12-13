@@ -15,5 +15,5 @@ for numero in numeros:
         impares.append(numero)
 print('-='*30)
 print(f'Números digitados: {numeros}')
-print(f'números pares: {pares}')
+print(f'Números pares: {pares}')
 print(f'Números ímpares: {impares}')

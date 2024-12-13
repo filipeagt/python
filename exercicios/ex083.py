@@ -8,8 +8,8 @@ for caractere in expressao:
             pilha.pop()
         else:
             pilha.append(caractere)
-
+            break
 if len(pilha) == 0:
-    print(f'A expressão {expressao} é válida.')
+    print(f'A expressão {expressao} é válida!')
 else:
-    print(f'A expressão {expressao} é inválida.')
+    print(f'A expressão {expressao} está errada!')
