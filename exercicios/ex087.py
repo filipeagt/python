@@ -10,7 +10,7 @@ for linha, lista in enumerate(matriz):
             somaPares += item
         if coluna == 2:
             somaColuna3 += item
-        print(f'[ {item} ]', end='')
+        print(f'[{item:^5}]', end='')
     print()
 print(f'Soma dos valores pares: {somaPares}')
 print(f'Soma dos valores da 3ª coluna: {somaColuna3}')

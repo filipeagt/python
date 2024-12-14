@@ -14,7 +14,7 @@ print('-='*15)
 print('Nº  NOME           MÉDIA')
 print('-'*30)
 for num, aluno in enumerate(listaAlunos):
-    print(f'{num:<3} {aluno[0]:<15} {(aluno[1][0] + aluno[1][1]) / 2}')
+    print(f'{num:<3} {aluno[0]:<14} {(aluno[1][0] + aluno[1][1]) / 2:>5.1f}')
 print('-'*30)
 while True:
     nAluno = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
