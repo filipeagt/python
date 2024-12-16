@@ -1,9 +1,9 @@
 jogador = {}
 partidas = []
 jogador['nome'] = input('Nome do jogador: ').strip()
-nPartidas = int(input(f'Quantas partidas {jogador["nome"]} jogou? '))
+nPartidas = int(input(f'    Quantas partidas {jogador["nome"]} jogou? '))
 for x in range(nPartidas):
-    partidas.append(int(input(f'Quantos gols na partida {x}? ')))
+    partidas.append(int(input(f'    Quantos gols na partida {x}? ')))
 jogador['gols'] = partidas
 jogador['total'] = sum(partidas)
 print('-=' * 30)

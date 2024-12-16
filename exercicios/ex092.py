@@ -12,4 +12,4 @@ if ctps['ctps'] != 0:
 print('-=' * 30)
 print(ctps)
 for chave, valor in ctps.items():
-    print(f'{chave} tem o valor {valor}')
+    print(f'    - {chave} tem o valor {valor}')

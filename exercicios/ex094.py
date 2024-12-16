@@ -5,14 +5,23 @@ mediaIdade = 0
 while True:
     pessoa = {}    
     pessoa['nome'] = input('Nome: ').strip()
-    pessoa['sexo'] = input('Sexo [F/M]: ').strip().upper()[0]
+    while True:
+        sexo = input('Sexo [F/M]: ').strip().upper()[0]
+        if sexo in 'FM':
+            pessoa['sexo'] = sexo
+            break
+        print('ERRO! Por favor, digite apenas M ou F.')
     pessoa['idade'] = int(input('Idade: '))
     listaPessoas.append(pessoa)
-    opcao = input('Deseja continuar? [S/N] ').strip().upper()[0]
+    while True:
+        opcao = input('Deseja continuar? [S/N] ').strip().upper()[0]
+        if opcao in 'SN':
+            break
+        print('ERRO! Responda apena S ou N.')
     if opcao == 'N':
         break
 print('-=' * 30)
-print(f'- O grupo tem {len(listaPessoas)} pessoas.')
+print(f'- O grupo tem {len(listaPessoas)} pessoas cadastradas.')
 for p in listaPessoas:
     mediaIdade += p['idade']
     if p['sexo'] == 'F':
@@ -28,6 +37,6 @@ for p in listaPessoas:
 print(f'\n- Lista de pessoas acima da média de idade:')
 for p in listaMaisVelhos:
     for k, v in p.items():
-        print(f'{k} = {v};', end=' ')
+        print(f'    {k} = {v};', end=' ')
     print()
 print('<< ENCERRADO >>')
