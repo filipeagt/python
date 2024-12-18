@@ -5,6 +5,6 @@ def area(largura, comprimento):
 # Program Principal
 print(' Controle de Terrenos')
 print('-' * 20)
-largura = float(input('largura (m): '))
+largura = float(input('LARGURA (m): '))
 comprimento = float(input('COMPRIMENTO (m): '))
 area(largura, comprimento)
