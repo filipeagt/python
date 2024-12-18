@@ -1,4 +1,6 @@
 from time import sleep
+
+
 def maior(* valores):
     print('-=' * 30)
     print('Analisando os valores passados...')
