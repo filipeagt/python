@@ -1,8 +1,8 @@
-def ficha(nome='<desconhecido>', gols=0):
+def ficha(nome='<desconhecido>', gols='0'):
     if nome == '':
         nome = '<desconhecido>'
-    if gols == '':
-        gols = 0
+    if gols == '' or not gols.isnumeric():
+        gols = '0'
     print(f'O jogador {nome} fez {gols} gol(s) no campeonato.')
 
 print('-' * 30)

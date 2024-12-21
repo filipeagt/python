@@ -19,3 +19,4 @@ def fatorial(numero, show=False):
 
 
 print(fatorial(5, True))
+help(fatorial)
