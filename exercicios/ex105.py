@@ -9,10 +9,7 @@ def notas(* notas, sit=False):
 	info['quantidade'] = len(notas)
 	info['maior'] = max(notas)
 	info['menor'] = min(notas)
-	info['média'] = 0
-	for nota in notas:
-		info['média'] += nota
-	info['média'] /= info['quantidade']
+	info['média'] = sum(notas) / info['quantidade']
 	if sit:
 		if info['média'] >= 7:
 			info['situação'] = 'BOA'
@@ -22,7 +19,8 @@ def notas(* notas, sit=False):
 			info['situação'] = 'RUIM'
 	return info
 	
-	
-resp = notas(5.5, 4.5, 1, 6.5, sit=True)
+
+#Programa Principal	
+resp = notas(5.5, 9.5, 10, 6.5, sit=True)
 print(resp)
 help(notas)
