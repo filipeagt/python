@@ -1,26 +1,34 @@
-def moeda(valor):
-	return f'R${valor:.2f}'.replace('.', ',')
+def moeda(valor=0, moeda='R$'):
+	return f'{moeda}{valor:.2f}'.replace('.', ',')
 
 
-def aumentar(valor, percentual, format=False):
+def aumentar(valor=0, percentual=0, format=False):
+	"""
+	=> Calcula o aumento de um determinado preço,
+	retornando oresultado com ou sem formatação.
+	:param valor: o preço que se quer reajustar.
+	:param percentual: qual é a a porcentagem do aumento.
+	:param format: quer a saída formatada ou não?
+	:return: o valor reajustado com ou sem formato.
+	"""
 	valor += valor * percentual / 100
 	return moeda(valor) if format else valor
 	
 
-def diminuir(valor, percentual, format=False):
+def diminuir(valor=0, percentual=0, format=False):
 	valor -= valor * percentual / 100
 	return moeda(valor) if format else valor
 	
 	
-def metade(valor, format=False):
+def metade(valor=0, format=False):
 	return moeda(valor / 2) if format else valor / 2
 	
 	
-def dobro(valor, format=False):
+def dobro(valor=0, format=False):
 	return moeda(valor * 2) if format else valor * 2
 	
 
-def resumo(valor, aumento, desconto):
+def resumo(valor=0, aumento=10, desconto=5):
 	print('-' * 30)
 	print(f'{"RESUMO DO VALOR":^30}')
 	print('-' * 30)
