@@ -4,7 +4,7 @@ def leiaInt(msg):
 			n = int(input(msg))
 			return n
 		except KeyboardInterrupt:
-			print('O usuário preferiu não digitar esse número.')
+			print('\033[0;31mO usuário preferiu não digitar esse número.\033[m')
 			return 0
 		except Exception:
 		    print('\033[0;31mERRO! Digite um número inteiro válido.\033[m')
@@ -16,7 +16,7 @@ def leiaFloat(msg):
 			n = float(input(msg))
 			return n
 		except KeyboardInterrupt:
-			print('O usuário preferiu não digitar esse número.')
+			print('\033[0;31mO usuário preferiu não digitar esse número.\033[m')
 			return 0
 		except Exception:
 		    print('\033[0;31mERRO! Digite um número real válido.\033[m')
