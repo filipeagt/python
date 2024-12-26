@@ -26,31 +26,15 @@ def ler():
         erro('Não foi possível abrir o arquivo')
         
 
-def menu():
-    while True:
-        titulo('MENU PRINCIPAL')
-        opcao(1, 'Ver pessoas cadastradas')
-        opcao(2, 'Cadastrar nova Pessoa')
-        opcao(3, 'Sair do sistema')
-        linha()
-        while True:
-            try:
-                escolha = int(input('\033[0;33mSua Opção: \033[m'))
-                if escolha in (1, 2, 3):
-                    break
-                erro(f'Escolha uma opção entre 1 e 3.')
-            except:
-                erro(f'{escolha} não é uma opção válida.')
-        if escolha == 1:
-            ler()
-        elif escolha == 2:
-            escrever()
-        elif escolha == 3:
-            titulo('Saindo do sistema... Até logo!')
-            break
+def menu(opcoes):
+    titulo('MENU PRINCIPAL')
+    for indice, valor in enumerate(opcoes):
+        opcao(indice + 1, valor)
+    linha()
+    escolha = leiaInt('\033[32mSua Opção: \033[m')
+    return escolha
 
     
-
 def titulo(msg):
     linha()
     print(f'{msg:^40}')
@@ -67,3 +51,17 @@ def erro(msg):
 
 def linha():
     print('-' * 40)
+
+
+def leiaInt(msg):
+    while True:
+        try:
+            n = int(input(msg))
+        except (ValueError, TypeError):
+            erro('Por favor, digite um número inteiro válido.')
+            continue
+        except (KeyboardInterrupt):
+            erro('O usuário preferiu não digitar esse número.')
+            return 0
+        else:
+            return n
